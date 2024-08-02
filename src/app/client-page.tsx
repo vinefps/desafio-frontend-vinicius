@@ -15,10 +15,6 @@ const ClientPage: React.FC<ClientPageProps> = ({ heroes }) => {
   const [selectedHeroes, setSelectedHeroes] = useState<HeroType[]>([]);
   const [winner, setWinner] = useState<HeroType | null>(null);
 
-  useEffect(() => {
-    console.log("Heroes fetched on the client:", heroes);
-  }, [heroes]);
-
   const filteredHeroes = heroes.filter((hero) =>
     hero.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -35,10 +31,12 @@ const ClientPage: React.FC<ClientPageProps> = ({ heroes }) => {
     });
   };
 
+  //Pegar as keys da propriedade powerstats dos objetos hero1 e hero2, e através do reduce, retornar o acumulator.
   const compareHeroes = () => {
     if (selectedHeroes.length < 2) return;
 
     const [hero1, hero2] = selectedHeroes;
+
     const totalPower1 = Object.values(hero1.powerstats).reduce(
       (a, b) => a + b,
       0
