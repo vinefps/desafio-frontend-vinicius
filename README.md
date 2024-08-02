@@ -14,7 +14,7 @@ Este é um projeto de visualização e comparação de heróis desenvolvido util
 Para instalar e rodar o projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
-   git clone https://github.com/vinefps/desafio-frontend-vinicius.git)
+   git clone https://github.com/vinefps/desafio-frontend-vinicius.git
    
 2. Navegue até o diretório do projeto
    cd desafio-frontend-vinicius
