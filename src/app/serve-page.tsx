@@ -1,6 +1,6 @@
+import HeroList from "../components/HeroList";
 import { HeroType } from "../types/HeroType";
 import ClientPage from "./client-page";
-
 async function fetchHeroes(): Promise<HeroType[]> {
   const res = await fetch(
     "http://homologacao3.azapfy.com.br/api/ps/metahumans"
@@ -9,7 +9,7 @@ async function fetchHeroes(): Promise<HeroType[]> {
   return heroes;
 }
 
-export default async function Home() {
+export default async function ServerPage() {
   const heroes = await fetchHeroes();
 
   return (
